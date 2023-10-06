@@ -1,0 +1,110 @@
+[
+  {
+    "username": "lisa_anderson",
+    "profilePicture": "profile_9",
+    "isFollowing": true,
+    "isFollowers": false
+  },
+  {
+    "username": "jane_smith",
+    "profilePicture": "profile_2",
+    "isFollowing": false,
+    "isFollowers": true
+  },
+  {
+    "username": "elizabeth_martin",
+    "profilePicture": "profile_11",
+    "isFollowing": true,
+    "isFollowers": true
+  },
+  {
+    "username": "olivia_lee",
+    "profilePicture": "profile_15",
+    "isFollowing": true,
+    "isFollowers": true
+  },
+  {
+    "username": "david_williams",
+    "profilePicture": "profile_4",
+    "isFollowing": false,
+    "isFollowers": false
+  },
+  {
+    "username": "emily_brown",
+    "profilePicture": "profile_5",
+    "isFollowing": true,
+    "isFollowers": false
+  },
+  {
+    "username": "susan_jackson",
+    "profilePicture": "profile_7",
+    "isFollowing": true,
+    "isFollowers": true
+  },
+  {
+    "username": "grace_martin",
+    "profilePicture": "profile_17",
+    "isFollowing": true,
+    "isFollowers": false
+  },
+  {
+    "username": "robert_jones",
+    "profilePicture": "profile_8",
+    "isFollowing": false,
+    "isFollowers": false
+  },
+  {
+    "username": "william_taylor",
+    "profilePicture": "profile_10",
+    "isFollowing": false,
+    "isFollowers": true
+  },
+  {
+    "username": "natalie_rodriguez",
+    "profilePicture": "profile_13",
+    "isFollowing": true,
+    "isFollowers": false
+  },
+  {
+    "username": "john_doe",
+    "profilePicture": "profile_1",
+    "isFollowing": true,
+    "isFollowers": false
+  },
+  {
+    "username": "james_johnson",
+    "profilePicture": "profile_12",
+    "isFollowing": false,
+    "isFollowers": false
+  },
+  {
+    "username": "alice_johnson",
+    "profilePicture": "profile_3",
+    "isFollowing": true,
+    "isFollowers": true
+  },
+  {
+    "username": "peter_white",
+    "profilePicture": "profile_14",
+    "isFollowing": false,
+    "isFollowers": true
+  },
+  {
+    "username": "thomas_wilson",
+    "profilePicture": "profile_16",
+    "isFollowing": false,
+    "isFollowers": false
+  },
+  {
+    "username": "michael_davis",
+    "profilePicture": "profile_6",
+    "isFollowing": false,
+    "isFollowers": true
+  },
+  {
+    "username": "jacob_hernandez",
+    "profilePicture": "profile_18",
+    "isFollowing": false,
+    "isFollowers": true
+  }
+]
