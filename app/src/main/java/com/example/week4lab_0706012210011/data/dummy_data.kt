@@ -8,16 +8,16 @@ import com.example.week4lab_0706012210011.model.products
 class dummy_data {
     fun get_data_line(): List<line_chat> {
         return listOf(
-            line_chat("Lebron James",  "Practice starts in 10, where are you?", "4/10/2023"),
-            line_chat("Kobe Bryant", "Hey, how's it going?", "3/10/2023"),
-            line_chat("Michael Jordan", "I heard you had a great game last night!", "2/10/2023"),
-            line_chat("Stephen Curry",  "Let's grab dinner tonight.", "1/10/2023"),
-            line_chat("Kevin Durant", "Can you pass me the ball more often?", "30/9/2023"),
-            line_chat("Magic Johnson", "We need to work on our defense.", "30/9/2023"),
-            line_chat("Larry Bird",  "I'll be late for practice tomorrow.", "28/9/2023"),
-            line_chat("Tim Duncan",  "I'm excited about the upcoming game.", "25/9/2023"),
-            line_chat("Shaquille O'Neal",  "I need new sneakers.", "21/9/2023"),
-            line_chat("Charles Barkley", "Let's hit the gym early.", "18/9/2023")
+            line_chat(R.drawable.profile_18, "Lebron James",  "Practice starts in 10, where are you?", "4/10/2023"),
+            line_chat(R.drawable.profile_2, "Kobe Bryant", "Hey, how's it going?", "3/10/2023"),
+            line_chat(R.drawable.profile_5, "Michael Jordan", "I heard you had a great game last night!", "2/10/2023"),
+            line_chat(R.drawable.profile_1, "Stephen Curry",  "Let's grab dinner tonight.", "1/10/2023"),
+            line_chat(R.drawable.profile_17, "Kevin Durant", "Can you pass me the ball more often?", "30/9/2023"),
+            line_chat(R.drawable.profile_18, "Magic Johnson", "We need to work on our defense.", "30/9/2023"),
+            line_chat(R.drawable.profile_16, "Larry Bird",  "I'll be late for practice tomorrow.", "28/9/2023"),
+            line_chat(R.drawable.profile_12, "Tim Duncan",  "I'm excited about the upcoming game.", "25/9/2023"),
+            line_chat(R.drawable.profile_17, "Shaquille O'Neal",  "I need new sneakers.", "21/9/2023"),
+            line_chat(R.drawable.profile_6, "Charles Barkley", "Let's hit the gym early.", "18/9/2023")
         )
     }
 

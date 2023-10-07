@@ -129,7 +129,9 @@ fun InstagramView(StoryList: List<Story>, FeedList: List<Feed>, SuggestionList: 
             )
         }
     }, content = {
-        LazyColumn() {
+        LazyColumn(
+            modifier = Modifier.padding(bottom = 48.dp)
+        ) {
             item(content = {
                 Row(
                     modifier = Modifier
@@ -306,6 +308,8 @@ fun OneFeed(feed: Feed, context: Context) {
     var savedtoggle by remember { mutableStateOf(feed.saved) }
     var captiontoggle by remember { mutableStateOf(true) }
 
+    var like_counter by remember { mutableStateOf(feed.amount_like) }
+
     Column(
         modifier = Modifier.background(Color.Black)
     ) {
@@ -333,7 +337,9 @@ fun OneFeed(feed: Feed, context: Context) {
                 )
             }
 
-            IconButton(onClick = { /* TODO */ }) {
+            IconButton(onClick = { Toast.makeText(
+                context, "Moreover??", Toast.LENGTH_SHORT
+            ).show() }) {
                 Icon(
                     imageVector = Icons.Filled.MoreVert,
                     contentDescription = "More Button",
@@ -363,10 +369,12 @@ fun OneFeed(feed: Feed, context: Context) {
                 IconButton(onClick = {
                     likedtoggle = !likedtoggle
                     if (likedtoggle) {
+                        like_counter++
                         Toast.makeText(
                             context, "You Liked it", Toast.LENGTH_SHORT
                         ).show()
                     } else {
+                        like_counter--
                         Toast.makeText(
                             context, "You Unliked it", Toast.LENGTH_SHORT
                         ).show()
@@ -389,7 +397,7 @@ fun OneFeed(feed: Feed, context: Context) {
                 }
                 IconButton(onClick = {
                     Toast.makeText(
-                        context, "Comment Feature is On Progress", Toast.LENGTH_SHORT
+                        context, "Comment Feature is On Progress~", Toast.LENGTH_SHORT
                     ).show()
                 }) {
                     Image(
@@ -443,13 +451,13 @@ fun OneFeed(feed: Feed, context: Context) {
                 .padding(start = 10.dp, end = 10.dp, bottom = 16.dp)
         ) {
             Text(
-                text = if (feed.amount_like == 1) {
-                    "${feed.amount_like} like"
-                } else if (feed.amount_like > 999) {
-                    val ribuan = DecimalFormat("#,###").format(feed.amount_like)
-                    "${ribuan} likes"
+                text = if (like_counter == 1) {
+                    "${like_counter} like"
+                } else if (like_counter > 999) {
+                    val pinjam_seribu = DecimalFormat("#,###").format(like_counter)
+                    "${pinjam_seribu} likes"
                 } else {
-                    "${feed.amount_like} likes"
+                    "${like_counter} likes"
                 }, color = Color.White, fontSize = 14.sp, modifier = Modifier.padding(bottom = 4.dp)
             )
 

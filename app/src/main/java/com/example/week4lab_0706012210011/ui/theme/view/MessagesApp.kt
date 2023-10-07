@@ -1,6 +1,7 @@
 package com.example.week4lab_0706012210011.ui.theme.view
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -36,7 +37,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.week4lab_0706012210011.R
 import com.example.week4lab_0706012210011.data.dummy_data
 import com.example.week4lab_0706012210011.model.line_chat
 
@@ -44,6 +44,8 @@ import com.example.week4lab_0706012210011.model.line_chat
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau di preview, mohon cek di emulator/HP
+    val context = LocalContext.current
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -57,7 +59,12 @@ fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau 
                 },
                 actions = {
                     IconButton(
-                        onClick = { /* TODO */ }
+                        onClick = {
+                            Toast.makeText(
+                                context,
+                                "More Button",
+                                Toast.LENGTH_SHORT
+                            ).show()}
                     ) {
                         Icon(
                             imageVector = Icons.Filled.MoreVert,
@@ -74,12 +81,12 @@ fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau 
                 modifier = Modifier
                     .fillMaxSize()
                     .background(color = Color.Black)
-                    .padding(start = 16.dp, end = 16.dp, top = 80.dp, bottom = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(30.dp)
+                    .padding(start = 16.dp, end = 16.dp, top = 64.dp, bottom = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 items(MessageList) {
                     OneLineChat(
-                        it
+                        it, context
                     )
                 }
             }
@@ -91,12 +98,12 @@ fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau 
 
 
 @Composable
-fun OneLineChat(Line_Chat: line_chat) {
-    val context = LocalContext.current
+fun OneLineChat(Line_Chat: line_chat, context: Context) {
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .padding(top = 16.dp)
             .clickable(onClick = {Toast.makeText(
                 context,
                 "${Line_Chat.name} Clicked!",
@@ -107,7 +114,7 @@ fun OneLineChat(Line_Chat: line_chat) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            painter = painterResource(id = R.drawable.empty_profile),
+            painter = painterResource(Line_Chat.profile_picture),
             contentDescription = "Empty Profile",
             modifier = Modifier
                 .size(50.dp)
@@ -122,13 +129,13 @@ fun OneLineChat(Line_Chat: line_chat) {
         ) {
             Text(
                 text = Line_Chat.name,
-                fontSize = 16.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
             )
             Text(
                 text = Line_Chat.recent_message,
-                fontSize = 16.sp,
+                fontSize = 14.sp,
                 color = Color.White,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
