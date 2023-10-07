@@ -36,14 +36,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.week4lab_0706012210011.data.dummy_data
 import com.example.week4lab_0706012210011.R
+import com.example.week4lab_0706012210011.data.dummy_data
 import com.example.week4lab_0706012210011.model.line_chat
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau di preview
+fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau di preview, mohon cek di emulator/HP
     Scaffold(
         topBar = {
             TopAppBar(
@@ -66,7 +66,7 @@ fun MessageView(MessageList: List<line_chat>) { // memang topbarnya putih kalau 
                         )
                     }
                 },
-                modifier = Modifier.background(Color.Black)
+                modifier = Modifier.background(Color.Black),
             )
         },
         content = {

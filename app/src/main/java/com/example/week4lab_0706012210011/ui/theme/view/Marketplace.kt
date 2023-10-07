@@ -34,6 +34,7 @@ import com.example.week4lab_0706012210011.R
 import com.example.week4lab_0706012210011.data.dummy_data
 import com.example.week4lab_0706012210011.model.categories
 import com.example.week4lab_0706012210011.model.products
+import java.text.DecimalFormat
 
 @Composable
 fun MarketView(CategoriesList: List<categories>, ProductList: List<products>) {
@@ -178,7 +179,7 @@ fun ProductCard(Products: products) {
                 fontSize = 18.sp
             )
             Text(
-                text = "Rp. ${Products.price}",
+                text = "Rp. ${DecimalFormat("#,###").format(Products.price)}",
                 fontSize = 14.sp
             )
             Text(
